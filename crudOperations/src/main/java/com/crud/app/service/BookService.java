@@ -22,8 +22,8 @@ public class BookService {
         return repo.findById(id).orElse(null);
     }
 
-    public void addBook(Book book){
-        repo.save(book);
+    public Book saveBook(Book book){
+        return repo.save(book);
     }
 
     public void updateBook(Long id, Book updatedBook){
